@@ -5,20 +5,18 @@ public class Clip {
 
     public Clip(List<Frame> frames) {
         this.frames = frames;
+        assignClipToFrames();
     }
-
+    
     public Clip split(int framePos){
         var frameSubList = frames.subList(framePos, frames.size());
         frames.removeAll(frameSubList);
 
-        var clip = new Clip(frameSubList);
-        
-        return reassignClips(clip);
+        return new Clip(frameSubList);
     }
 
-    private Clip reassignClips(Clip clip){
-        clip.getFrames().forEach(frame -> frame.setClip(clip));
-        return clip;
+    private void assignClipToFrames(){
+        frames.forEach(frame -> frame.setClip(this));
     }
 
     public void play(){
