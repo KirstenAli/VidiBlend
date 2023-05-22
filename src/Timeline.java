@@ -53,11 +53,7 @@ public class Timeline {
         for(Clip clip: timeline)
             clip.play();
     }
-
-    public void stop(){
-        // todo
-    }
-
+    
     public void pause(){
         // TODO
     }
