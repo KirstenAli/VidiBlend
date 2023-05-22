@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface Transition {
+public interface Transition {
+    void effect();
 }

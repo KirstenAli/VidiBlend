@@ -1,4 +1,4 @@
-public enum TransitionOptions {
+public enum TransitionOption {
     FADE,
     FLASH
 }
