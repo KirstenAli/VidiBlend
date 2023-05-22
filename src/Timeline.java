@@ -11,9 +11,10 @@ public class Timeline {
         buildFrameMap();
     }
 
-    public void split(int frameId, int index){
+    public void split(int frameId, int index, int framePos){
 
         var clip = getClip(frameId);
+        clip = clip.split(framePos);
 
         if(index >= timeline.size())
             timeline.add(index, clip);

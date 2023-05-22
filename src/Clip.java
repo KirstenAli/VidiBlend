@@ -7,7 +7,6 @@ public class Clip {
         this.frames = clip;
     }
 
-
     public Clip split(int framePos){
         var newClip = frames.subList(framePos, frames.size());
         frames.removeAll(newClip);
