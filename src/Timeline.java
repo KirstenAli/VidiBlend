@@ -37,7 +37,7 @@ public class Timeline {
 
     }
 
-    public void playFrom(int frameId, int framePos, int index){
+    public void playFromFrame(int frameId, int framePos, int index){
         var clip = getClip(frameId);
 
         clip.playFrom(framePos);
